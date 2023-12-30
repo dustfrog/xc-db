@@ -4,7 +4,7 @@ spring:
 
   datasource:
     platform: postgres
-    url: jdbc:postgresql://localhost:5432/poc_db?currentSchema=liquibase_demo
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=liquibase_demo
     username: postgres
     password: root
     driver-class-name: org.postgresql.Driver

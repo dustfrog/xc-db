@@ -8,4 +8,4 @@
       4. Unit test case for Controller
       5. Test endpoint
 
-Make sure your read my tutorial: ["Integrate Liquibase with Spring Boot"](https://medium.com/@arjunsk/liquibase-create-schema-tables-items-in-your-database-753a6dd38893)
+Make sure your read my tutorial: ["Integrate Liquibase with Spring Boot"](https://medium.com/@rkennedy/liquibase-create-schema-tables-items-in-your-database-753a6dd38893)

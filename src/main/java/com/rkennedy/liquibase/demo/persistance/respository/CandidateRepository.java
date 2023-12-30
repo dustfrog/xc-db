@@ -1,6 +1,6 @@
-package com.arjunsk.liquibase.demo.persistance.respository;
+package com.rkennedy.liquibase.demo.persistance.respository;
 
-import com.arjunsk.liquibase.demo.persistance.entities.Candidate;
+import com.rkennedy.liquibase.demo.persistance.entities.Candidate;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

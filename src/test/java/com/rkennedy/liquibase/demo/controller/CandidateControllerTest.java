@@ -1,4 +1,4 @@
-package com.arjunsk.liquibase.demo.controller;
+package com.rkennedy.liquibase.demo.controller;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -21,21 +21,22 @@ import org.springframework.web.context.WebApplicationContext;
 @SpringBootTest
 public class CandidateControllerTest {
 
-  @Autowired private WebApplicationContext webApplicationContext;
-  private MockMvc mockMvc;
+    @Autowired
+    private WebApplicationContext webApplicationContext;
+    private MockMvc mockMvc;
 
-  @Before
-  public void setUp() {
-    mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
-  }
+    @Before
+    public void setUp() {
+        mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
+    }
 
-  @Test
-  public void testGetCandidates() throws Exception {
+    @Test
+    public void testGetCandidates() throws Exception {
 
-    mockMvc
-        .perform(MockMvcRequestBuilders.get("/candidates/").accept(MediaType.APPLICATION_JSON))
-        .andDo(print())
-        .andExpect(status().isOk())
-        .andExpect(content().string(containsString("firstName")));
-  }
+        mockMvc
+                .perform(MockMvcRequestBuilders.get("/candidates/").accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("firstName")));
+    }
 }

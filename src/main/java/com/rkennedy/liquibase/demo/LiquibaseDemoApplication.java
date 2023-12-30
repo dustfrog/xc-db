@@ -1,4 +1,4 @@
-package com.arjunsk.liquibase.demo;
+package com.rkennedy.liquibase.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

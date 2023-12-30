@@ -1,4 +1,4 @@
-package com.arjunsk.liquibase.demo.persistance.entities;
+package com.rkennedy.liquibase.demo.persistance.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,7 +1,7 @@
-package com.arjunsk.liquibase.demo.controller;
+package com.rkennedy.liquibase.demo.controller;
 
-import com.arjunsk.liquibase.demo.persistance.entities.Candidate;
-import com.arjunsk.liquibase.demo.persistance.respository.CandidateRepository;
+import com.rkennedy.liquibase.demo.persistance.entities.Candidate;
+import com.rkennedy.liquibase.demo.persistance.respository.CandidateRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
