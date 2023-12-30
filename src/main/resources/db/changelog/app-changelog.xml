@@ -6,7 +6,7 @@
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
     <!-- Changes to include -->
-    <include file="db/changelog/init/running_init.xml"/>
+    <include relativeToChangelogFile="true" file="init/running_init.xml"/>
 <!--    <include file="db/changelog/changes/app_candidate_insert.sql"/>-->
    
 </databaseChangeLog>

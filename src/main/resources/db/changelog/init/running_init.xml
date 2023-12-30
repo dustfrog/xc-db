@@ -13,11 +13,19 @@
         <sql>
             CREATE SCHEMA IF NOT EXISTS running;
         </sql>
+        <rollback>
+            DROP SCHEMA IF EXISTS running;
+        </rollback>
     </changeSet>
     
-    <changeSet id="init-20231229-2" author="rkennedy">
+    <changeSet id="init-20231229-2" author="rkennedy" failOnError="true">
+        <preConditions onFail="WARN">
+            <not>
+                <tableExists tableName="running"/>
+            </not>
+        </preConditions>
         <createTable schemaName="running" tableName="athlete">
-            <column name="athlete_id" type="int">
+            <column name="athlete_id" type="int" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false" />
             </column>
             <column name="first_name" type="varchar2(32)">
@@ -32,8 +40,12 @@
             <column name="graduation_year" type="int">
                 <constraints nullable="false" />
             </column>
-            <column name="created_at" defaultValueDate="YYYY-MM-DDThh:mm:ss" />
-            <column name="updated_at" defaultValueDate="YYYY-MM-DDThh:mm:ss" />
+            <column name="created_at" defaultValueComputed="CURRENT_TIMESTAMP" type="datetime">
+                <constraints nullable="false" />
+            </column>
+            <column name="updated_at" defaultValueComputed="CURRENT_TIMESTAMP" type="datetime">
+                <constraints nullable="false" />
+            </column>
         </createTable>
     </changeSet>
 
