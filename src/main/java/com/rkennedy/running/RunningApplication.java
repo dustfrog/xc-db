@@ -1,17 +1,17 @@
-package com.arjunsk.liquibase.demo;
+package com.rkennedy.running;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LiquibaseDemoApplication {
+public class RunningApplication {
 
 	/**
 	 * main() Driver function
 	 * @param args Not accepting anything right now
 	 */
 	public static void main(String[] args) {
-		SpringApplication.run(LiquibaseDemoApplication.class, args);
+		SpringApplication.run(RunningApplication.class, args);
 	}
 
 }

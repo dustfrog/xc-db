@@ -4,7 +4,7 @@ spring:
 
   datasource:
     platform: postgres
-    url: jdbc:postgresql://localhost:5432/poc_db?currentSchema=liquibase_demo
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=running
     username: postgres
     password: root
     driver-class-name: org.postgresql.Driver
@@ -26,4 +26,4 @@ spring:
 
   liquibase:
     change-log: classpath:/db/changelog/app-changelog.xml
-    default-schema: liquibase_demo
+    default-schema: running

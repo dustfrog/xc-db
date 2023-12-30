@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+        http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+
+    <changeSet id="init-20231229-1" author="rkennedy">
+        <sql>
+            CREATE SCHEMA IF NOT EXISTS running;
+        </sql>
+    </changeSet>
+    
+    <changeSet id="init-20231229-2" author="rkennedy">
+        <createTable schemaName="running" tableName="athlete">
+            <column name="athlete_id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="first_name" type="varchar2(32)">
+                <constraints nullable="true" />
+            </column>
+            <column name="last_name" type="varchar2(32)">
+                <constraints nullable="true" />
+            </column>
+            <column name="start_year" type="int">
+                <constraints nullable="false" />
+            </column>
+            <column name="graduation_year" type="int">
+                <constraints nullable="false" />
+            </column>
+            <column name="created_at" defaultValueDate="YYYY-MM-DDThh:mm:ss" />
+            <column name="updated_at" defaultValueDate="YYYY-MM-DDThh:mm:ss" />
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
